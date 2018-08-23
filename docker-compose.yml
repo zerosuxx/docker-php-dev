@@ -1,0 +1,5 @@
+version: '3'
+services:
+  php-cli-dev:
+    build: .
+    image: zerosuxx/php-cli-dev:7.2.9

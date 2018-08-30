@@ -32,7 +32,7 @@ RUN set -xe; \
     docker-php-ext-enable opcache; \
     docker-php-ext-enable xdebug;
 
-# Config
+# Install binaries
 RUN set -xe; \
     curl https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer; \
     curl -o /usr/local/bin/phpstan -L https://github.com/phpstan/phpstan/releases/download/0.10.3/phpstan.phar; \

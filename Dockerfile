@@ -11,6 +11,7 @@ RUN set -xe; \
             git \
             curl \
             nano \
+            unzip \
             zlib1g-dev \
             libicu-dev \
             g++ \

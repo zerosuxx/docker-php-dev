@@ -1,5 +1,5 @@
 version: '3'
 services:
-  php-cli-dev:
+  php-dev:
     build: .
-    image: zerosuxx/php-cli-dev:7.2.9
+    image: zerosuxx/php-dev:7.2.9-apache

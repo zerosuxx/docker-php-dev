@@ -1,4 +1,4 @@
-FROM php:7.2.9-cli
+FROM php:7.2.9-apache
 MAINTAINER Mohos Tamas <tomi@mohos.name>
 
 ENV DEBIAN_FRONTEND "noninteractive"
@@ -32,14 +32,17 @@ RUN set -xe; \
     docker-php-ext-enable opcache; \
     docker-php-ext-enable xdebug;
 
-# Config
+# Install binaries
 RUN set -xe; \
     curl https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer; \
     curl -o /usr/local/bin/phpstan -L https://github.com/phpstan/phpstan/releases/download/0.10.3/phpstan.phar; \
     curl -o /usr/local/bin/phpunit -L https://phar.phpunit.de/phpunit-7.phar; \
     chmod +x /usr/local/bin/phpstan; \
     chmod +x /usr/local/bin/phpunit;
-    
-# Define workspace
-WORKDIR /opt/project
+	
+# Config
+RUN set -xe; \
+    a2enmod rewrite headers;
 
+# Copy files
+COPY vhost.conf /etc/apache2/sites-available/000-default.conf

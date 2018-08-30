@@ -2,4 +2,4 @@ version: '3'
 services:
   php-dev:
     build: .
-    image: zerosuxx/php-dev:7.2.9
+    image: zerosuxx/php-dev:7.2.9-apache

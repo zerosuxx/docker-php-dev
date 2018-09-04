@@ -42,7 +42,8 @@ RUN set -xe; \
 	
 # Config
 RUN set -xe; \
-    a2enmod rewrite headers;
+    a2enmod rewrite headers; \
+    echo 'ServerName localhost' >> /etc/apache2/apache2.conf;
 
 # Copy files
 COPY vhost.conf /etc/apache2/sites-available/000-default.conf

@@ -7,3 +7,4 @@
 - PHPStan 0.10.3
 
 Workdir: /var/www/html
+DocumentRoot: /var/www/html/public

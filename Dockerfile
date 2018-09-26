@@ -1,4 +1,4 @@
-FROM php:7.2.9-cli
+FROM php:7.2.10-cli
 MAINTAINER Mohos Tamas <tomi@mohos.name>
 
 ENV DEBIAN_FRONTEND "noninteractive"

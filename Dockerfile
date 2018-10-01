@@ -1,4 +1,4 @@
-FROM php:7.2.9-cli
+FROM php:7.2.10-cli
 MAINTAINER Mohos Tamas <tomi@mohos.name>
 
 ENV DEBIAN_FRONTEND "noninteractive"
@@ -31,6 +31,12 @@ RUN set -xe; \
     docker-php-ext-install opcache; \
     docker-php-ext-enable opcache; \
     docker-php-ext-enable xdebug;
+
+# Set configs
+RUN set -xe; \
+    echo 'error_reporting = E_ALL' >> /usr/local/etc/php/conf.d/php-debug-config.ini; \
+    echo 'display_errors = 1' >> /usr/local/etc/php/conf.d/php-debug-config.ini; \
+    echo 'display_startup_errors = 1' >> /usr/local/etc/php/conf.d/php-debug-config.ini;
 
 # Install binaries
 RUN set -xe; \

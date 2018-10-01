@@ -1,6 +1,6 @@
 # Docker PHP CLi DEV
 
-- php 7.2.9 cli (with OPCache and MySQL client)
+- php 7.2.10 cli (with OPCache and MySQL client)
 - XDebug 2.6.1
 - Composer 1.7.2
 - PHPUnit 7.3.5

@@ -32,6 +32,12 @@ RUN set -xe; \
     docker-php-ext-enable opcache; \
     docker-php-ext-enable xdebug;
 
+# Set configs
+RUN set -xe; \
+    echo 'error_reporting = E_ALL' >> /usr/local/etc/php/conf.d/php-debug-config.ini; \
+    echo 'display_errors = 1' >> /usr/local/etc/php/conf.d/php-debug-config.ini; \
+    echo 'display_startup_errors = 1' >> /usr/local/etc/php/conf.d/php-debug-config.ini;
+
 # Install binaries
 RUN set -xe; \
     curl https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer; \

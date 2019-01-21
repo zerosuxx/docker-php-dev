@@ -10,6 +10,7 @@ RUN set -xe; \
     apt-get install -y \
             git \
             zlib1g-dev \
+            libzip-dev \
             libicu-dev \
             g++ \
             curl \

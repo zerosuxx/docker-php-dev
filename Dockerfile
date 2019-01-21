@@ -43,5 +43,10 @@ RUN set -xe; \
     chmod +x /usr/local/bin/composer; \
     chmod +x /usr/local/bin/phpstan; \
     chmod +x /usr/local/bin/phpunit;
+RUN set -xe; \
+    a2enmod rewrite headers; \
+    echo 'ServerName localhost' >> /etc/apache2/apache2.conf;
+
+COPY vhost.conf /etc/apache2/sites-available/000-default.conf
 
 WORKDIR /var/www/html

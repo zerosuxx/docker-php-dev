@@ -1,4 +1,4 @@
-FROM php:7.3.1-cli
+FROM php:7.3.1-apache
 
 MAINTAINER Tamas 'ZerosuxX' Mohos <tomi@mohos.name>
 
@@ -43,4 +43,4 @@ RUN set -xe; \
     chmod +x /usr/local/bin/phpstan; \
     chmod +x /usr/local/bin/phpunit;
 
-WORKDIR /opt/project
+WORKDIR /var/www/html

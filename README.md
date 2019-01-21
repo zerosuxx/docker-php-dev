@@ -1,4 +1,4 @@
-# Docker PHP Cli DEV
+# Docker PHP Cli DEV + Apache
 
 - PHP 7.3.1 (with OPCache and MySQL client)
 - XDebug 2.7.0beta1
@@ -7,4 +7,5 @@
 - PHPStan 0.11.1
 - Swoole 4.2.12
 
-Workdir: /opt/project (for PHPStorm Testing)
+Workdir: /var/www/html
+DocumentRoot: /var/www/html/public

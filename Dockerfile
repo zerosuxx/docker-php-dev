@@ -1,4 +1,4 @@
-FROM php:7.3.1-cli
+FROM php:7.2.14-cli
 
 MAINTAINER Tamas 'ZerosuxX' Mohos <tomi@mohos.name>
 
